@@ -16,21 +16,18 @@
                     </div>
                 </div>
             </div>
-            
             <div id="SupportHim">
                 <p> Check out David_Katz links! </p>
                 <a href="https://davidtkatz.com/#/about"> David_Katz's home page </a>
                 <a href="https://github.com/15Dkatz/official_joke_api"> Official Joke Api Json </a>
             </div>
 
-            
         </div>
-
         <!-- Customize Joke to check how jokes output would look like -->
         <div id="CustomJoke">
             <!-- Set up for container with input to send v-model to data and return value same as input -->
             <div id="InputSetup"> 
-
+                
                 <label>Customize your joke how would look.</label>
 
                 <div id="margin-space">

@@ -1,7 +1,7 @@
 <template>
   <div class="joke">
-    <h3>Time to laughs some jokes!</h3>
-    <JokeInsert/>
+    <!-- UPDATE, add the message to send prop to component -->
+    <JokeInsert welcomeMsg="Time to laughs some jokes!"/>
   </div>
 </template>
 

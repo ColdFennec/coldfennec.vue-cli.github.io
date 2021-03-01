@@ -1,9 +1,10 @@
 <template>
     <div id="joke">
-
-        <!-- src of bootstrap https://getbootstrap.com/docs/4.0/components/buttons/#sizes -->
-        <button v-on:click="fetchJokes" class="btn btn-primary btn-lg"> {{ joketext }}</button>
-
+        <!-- UPDATE, add header from message to get props from view-->
+        <h3> {{ welcomeMsg }} </h3>
+        <!-- https://bootstrap-vue.org/docs/components/button -->
+        <!-- UPDATE, Change "bootstrap" to "bootstrap-vue" as was misunderstod about reqiure.-->
+        <b-button size="lg" variant="primary" @click="fetchJokes"> {{ joketext }}</b-button>
 
         <!--If statement if joke list active and loop in range of all jokes  -->
         <div v-if="JokeList">
@@ -17,17 +18,22 @@
             <div id="loadingBox"> {{ loading }} </div>
         </div>
 
-
-        
     </div>
 </template>
 
 <script>
 export default {
 
+    // UPDATE, add props to obtain from view message.
+    props: {
+        welcomeMsg: String
+    },
+
     // Return value as default before start
     data() {    
         return {
+            clicked: "You have not clicked yet..",
+            totalClick: "",
             JokeList: null,
             WordSearch: null,
             JokeSetUp: this.JokeList,
@@ -108,5 +114,16 @@ dd{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 175%;
     color: blanchedalmond;
+}
+
+h3 {
+    border: 5px solid black;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 40%;
+    padding: 20px;
+    background-color: rgb(0, 111, 157);
+    color: white;
 }
 </style>
